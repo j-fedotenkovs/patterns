@@ -8,10 +8,12 @@ public abstract class Animal {
         this.name = name;
     }
 
+    protected Animal() {
+    }
+
     public String getName() {
         return name;
     }
 
     public abstract String makeSound();
-
 }

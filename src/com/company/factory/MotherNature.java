@@ -8,12 +8,21 @@ public class MotherNature implements Fertility {
 
     private MotherNature() {}
 
+    /**
+     * Singleton pattern
+     */
+
     public static MotherNature getInstance() {
         if (instance == null) {
             instance = new MotherNature();
         }
         return instance;
     }
+
+    /**
+     * Factory Method pattern
+     */
+
     @Override
     public Animal giveBirth(AnimalSpecies species, String name) {
         switch (species) {

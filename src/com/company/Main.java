@@ -1,6 +1,9 @@
 package com.company;
 
 import com.company.animal.*;
+import com.company.decorators.AnimalVoiceBaseDecorator;
+import com.company.decorators.RussianSpeakingAnimalDecorator;
+import com.company.decorators.SpeakingAnimalDecorator;
 import com.company.factory.MotherNature;
 
 public class Main {
@@ -17,6 +20,10 @@ public class Main {
         owner.petAnimal(barsik);
 
         singTogether(barsik.makeSound(), sharik.makeSound(), burenka.makeSound());
+
+        AnimalVoiceBaseDecorator voiceDecorator = new SpeakingAnimalDecorator(
+                new RussianSpeakingAnimalDecorator(barsik));
+        System.out.println(voiceDecorator.makeSound());
     }
 
     static void singTogether(String... animalSounds) {
