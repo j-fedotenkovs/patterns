@@ -7,7 +7,7 @@ public class Cow extends Animal {
     }
 
     @Override
-    public String makeSound() {
+    public String getDefaultSound() {
         return "Moo!";
     }
 }

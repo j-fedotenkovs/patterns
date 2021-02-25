@@ -1,6 +1,7 @@
 package com.company.factory;
 
 import com.company.animal.*;
+import com.company.state.State;
 
 public class MotherNature implements Fertility {
 

@@ -12,4 +12,7 @@ public class RussianSpeakingAnimalDecorator extends AnimalVoiceBaseDecorator {
     public String makeSound() {
         return super.makeSound() + " Я говорю по-русски!";
     }
+
+    @Override
+    public String getDefaultSound() { return null; }
 }

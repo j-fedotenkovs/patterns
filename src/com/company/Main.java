@@ -5,6 +5,9 @@ import com.company.decorators.AnimalVoiceBaseDecorator;
 import com.company.decorators.RussianSpeakingAnimalDecorator;
 import com.company.decorators.SpeakingAnimalDecorator;
 import com.company.factory.MotherNature;
+import com.company.state.EatingState;
+import com.company.state.SleepingState;
+import com.company.state.State;
 
 public class Main {
 
@@ -17,12 +20,16 @@ public class Main {
         Animal sharik = motherNature.giveBirth(AnimalSpecies.DOG, "Sharik");
         Animal burenka = motherNature.giveBirth(AnimalSpecies.COW, "Burenka");
 
-        owner.petAnimal(barsik);
-
         singTogether(barsik.makeSound(), sharik.makeSound(), burenka.makeSound());
 
+        barsik.setState(new SleepingState(barsik));
+        System.out.println(barsik.makeSound());
+
+        burenka.setState(new EatingState(burenka));
+        System.out.println(burenka.makeSound());
+
         AnimalVoiceBaseDecorator voiceDecorator = new SpeakingAnimalDecorator(
-                new RussianSpeakingAnimalDecorator(barsik));
+                new RussianSpeakingAnimalDecorator(sharik));
         System.out.println(voiceDecorator.makeSound());
     }
 

@@ -7,7 +7,7 @@ public class Cat extends Animal {
     }
 
     @Override
-    public String makeSound() {
+    public String getDefaultSound() {
         return "Meow!";
     }
 }

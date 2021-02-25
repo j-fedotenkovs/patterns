@@ -7,7 +7,7 @@ public class Dog extends Animal {
     }
 
     @Override
-    public String makeSound() {
+    public String getDefaultSound() {
         return "Woof!";
     }
 }

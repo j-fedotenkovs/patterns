@@ -16,4 +16,7 @@ public class SpeakingAnimalDecorator extends AnimalVoiceBaseDecorator {
     private String learnToSpeak(String voice) {
         return String.format("My name is %s, now I can speak! %s", super.getName(), voice);
     }
+
+    @Override
+    public String getDefaultSound() { return null; }
 }
