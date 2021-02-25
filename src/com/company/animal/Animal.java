@@ -32,7 +32,7 @@ public abstract class Animal {
     }
 
     public String makeSound() {
-        return sound;
+        return String.format("%s says: %s", name, sound);
     };
 
     public abstract String getDefaultSound();

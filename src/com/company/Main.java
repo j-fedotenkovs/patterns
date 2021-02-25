@@ -20,8 +20,6 @@ public class Main {
         Animal sharik = motherNature.giveBirth(AnimalSpecies.DOG, "Sharik");
         Animal burenka = motherNature.giveBirth(AnimalSpecies.COW, "Burenka");
 
-        singTogether(barsik.makeSound(), sharik.makeSound(), burenka.makeSound());
-
         barsik.setState(new SleepingState(barsik));
         System.out.println(barsik.makeSound());
 
@@ -31,9 +29,5 @@ public class Main {
         AnimalVoiceBaseDecorator voiceDecorator = new SpeakingAnimalDecorator(
                 new RussianSpeakingAnimalDecorator(sharik));
         System.out.println(voiceDecorator.makeSound());
-    }
-
-    static void singTogether(String... animalSounds) {
-        System.out.println(String.format("Animal song: %s", String.join(" ", animalSounds)));
     }
 }

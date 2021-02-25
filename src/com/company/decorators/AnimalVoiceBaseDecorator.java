@@ -8,19 +8,5 @@ import com.company.animal.Animal;
 
 public abstract class AnimalVoiceBaseDecorator extends Animal {
 
-    private Animal animal;
-
-    AnimalVoiceBaseDecorator(Animal animal) {
-        this.animal = animal;
-    }
-
-    @Override
-    public String makeSound() {
-        return animal.makeSound();
-    }
-
-    @Override
-    public String getName() {
-        return animal.getName();
-    }
+    public abstract String makeSound();
 }
