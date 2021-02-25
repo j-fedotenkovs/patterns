@@ -7,9 +7,9 @@ public abstract class Animal {
 
     protected String sound;
 
-    private String name;
+    protected String name;
 
-    private State state;
+    protected State state;
 
     public Animal(String name) {
         this.name = name;
@@ -33,7 +33,7 @@ public abstract class Animal {
 
     public String makeSound() {
         return String.format("%s says: %s", name, sound);
-    };
+    }
 
     public abstract String getDefaultSound();
 }

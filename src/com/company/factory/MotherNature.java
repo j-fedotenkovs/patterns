@@ -1,13 +1,13 @@
 package com.company.factory;
 
 import com.company.animal.*;
-import com.company.state.State;
 
 public class MotherNature implements Fertility {
 
     private static MotherNature instance;
 
-    private MotherNature() {}
+    private MotherNature() {
+    }
 
     /**
      * Singleton pattern
